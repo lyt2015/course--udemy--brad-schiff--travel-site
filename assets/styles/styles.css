@@ -1,0 +1,14 @@
+$mainBlue: #2f5572;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: $mainBlue;
+  display: flex;
+
+  div {
+    color: red;
+  }
+}

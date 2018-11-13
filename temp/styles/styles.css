@@ -1,0 +1,14 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #2f5572;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body div {
+    color: red;
+  }

@@ -1,0 +1,15 @@
+{
+  "name": "01--project-travel-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyt2015/course--udemy--brad-schiff--travel-site.git"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.1"
+  }
+}

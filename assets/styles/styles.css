@@ -1,14 +1,5 @@
-$mainBlue: #2f5572;
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  color: $mainBlue;
-  display: flex;
-
-  div {
-    color: red;
-  }
-}
+@import 'normalize.css';
+@import 'base/_variables';
+@import 'base/_global';
+@import 'modules/_btn';
+@import 'modules/_large-hero';

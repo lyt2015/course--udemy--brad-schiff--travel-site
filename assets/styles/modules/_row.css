@@ -9,6 +9,14 @@
     padding-right: 65px;
   }
 
+  &--gutters--large {
+    margin-right: -100px;
+  }
+
+  &--gutters--large > div {
+    padding-right: 100px;
+  }
+
   &__b-margin--until-medium {
     margin-bottom: 1rem;
   }
@@ -34,6 +42,11 @@
 
     &__b-margin--until-medium {
       margin-bottom: 0;
+    }
+
+    &__medium-6 {
+      float: left;
+      width: 50%;
     }
   }
 }

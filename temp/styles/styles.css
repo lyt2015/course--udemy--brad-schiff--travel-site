@@ -1341,3 +1341,13 @@ a {
       float: right
   }
   }
+
+.reveal-item {
+  opacity: 0;
+  -webkit-transition: opacity 1.5s ease-out;
+  transition: opacity 1.5s ease-out;
+}
+
+.reveal-item--is-visible {
+    opacity: 1;
+  }

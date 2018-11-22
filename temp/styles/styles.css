@@ -576,7 +576,7 @@ a {
 
 @media screen and (min-width: 800px) {
 
-.row--equal-height-at-medium {
+.flexbox .row--equal-height-at-medium {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex
@@ -585,16 +585,20 @@ a {
 
 /* VERY IMPORTANT TWEAK */
 
-.row--equal-height-at-medium > div {
+.flexbox .row--equal-height-at-medium > div {
+      /* ! "float: none" seems to be of no use */
       float: none;
+
       display: -webkit-box;
+
       display: -ms-flexbox;
+
       display: flex;
     }
 
 @media screen and (min-width: 1010px) {
 
-.row--equal-height-at-large {
+.flexbox .row--equal-height-at-large {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex
@@ -603,10 +607,14 @@ a {
 
 /* VERY IMPORTANT TWEAK */
 
-.row--equal-height-at-large > div {
+.flexbox .row--equal-height-at-large > div {
+      /* ! "float: none" seems to be of no use */
       float: none;
+
       display: -webkit-box;
+
       display: -ms-flexbox;
+
       display: flex;
     }
 

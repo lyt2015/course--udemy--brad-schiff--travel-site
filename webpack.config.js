@@ -1,10 +1,13 @@
 const path = require('path')
 
 module.exports = {
-  entry: './assets/scripts/app.js',
+  entry: {
+    app: './assets/scripts/app.js',
+    vendor: './assets/scripts/vendor.js',
+  },
   output: {
     path: path.resolve(__dirname, 'temp', 'scripts'),
-    filename: 'app.js',
+    filename: '[name].js',
   },
   module: {
     loaders: [

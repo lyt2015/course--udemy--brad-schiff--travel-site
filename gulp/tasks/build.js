@@ -12,7 +12,7 @@ gulp.task('previewDist', () => {
     notify: false,
     port: 8080,
     server: {
-      baseDir: './dist',
+      baseDir: './docs',
     },
     ui: {
       port: 3000,
@@ -21,7 +21,7 @@ gulp.task('previewDist', () => {
 })
 
 gulp.task('deleteDistFolder', ['icons'], () => {
-  return del('./dist')
+  return del('./docs')
 })
 
 gulp.task('copyGeneralFiles', ['deleteDistFolder'], () => {
@@ -37,7 +37,7 @@ gulp.task('copyGeneralFiles', ['deleteDistFolder'], () => {
     '!./temp/**',
   ]
 
-  return gulp.src(pathToCopy).pipe(gulp.dest('./dist'))
+  return gulp.src(pathToCopy).pipe(gulp.dest('./docs'))
 })
 
 gulp.task('optimizeImages', ['deleteDistFolder'], () => {
@@ -50,7 +50,7 @@ gulp.task('optimizeImages', ['deleteDistFolder'], () => {
         multipass: true,
       })
     )
-    .pipe(gulp.dest('./dist/assets/images'))
+    .pipe(gulp.dest('./docs/assets/images'))
 })
 
 gulp.task('useminTrigger', ['deleteDistFolder'], () => {
@@ -66,7 +66,7 @@ gulp.task('usemin', ['styles', 'scripts'], () => {
         js: [() => rev(), () => uglify()],
       })
     )
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./docs'))
 })
 
 gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'optimizeImages', 'useminTrigger'])

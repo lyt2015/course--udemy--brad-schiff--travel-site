@@ -17,11 +17,11 @@ class RevealOnScroll {
   createWaypoints() {
     const { offset } = this
     this.itemsToReveal.each(function() {
-      const self = this
+      const that = this
       new Waypoint({
-        element: self,
+        element: that,
         handler: () => {
-          $(self).addClass('reveal-item--is-visible')
+          $(that).addClass('reveal-item--is-visible')
         },
         offset,
       })

@@ -5,8 +5,11 @@ class StickyHeader {
   constructor() {
     this.siteHeader = $('.site-header')
     this.headerTriggerElement = $('.large-hero__title')
+    this.pageSections = $('.page-section')
+    this.headerLinks = $('.primary-nav a')
 
     this.createHeaderWaypoint()
+    this.createPageSectionWaypoints()
   }
 
   createHeaderWaypoint() {
@@ -20,6 +23,34 @@ class StickyHeader {
           siteHeader.removeClass('site-header--dark')
         }
       },
+    })
+  }
+
+  createPageSectionWaypoints() {
+    const { headerLinks } = this
+    this.pageSections.each((index, pageSection) => {
+      new Waypoint({
+        element: pageSection,
+        handler: direction => {
+          if (direction === 'down') {
+            const matchingHeaderLink = pageSection.getAttribute('data-matching-link')
+            headerLinks.removeClass('is-current-link')
+            $(matchingHeaderLink).addClass('is-current-link')
+          }
+        },
+        offset: '25%',
+      })
+      new Waypoint({
+        element: pageSection,
+        handler: direction => {
+          if (direction === 'up') {
+            const matchingHeaderLink = pageSection.getAttribute('data-matching-link')
+            headerLinks.removeClass('is-current-link')
+            $(matchingHeaderLink).addClass('is-current-link')
+          }
+        },
+        offset: '-40%',
+      })
     })
   }
 }

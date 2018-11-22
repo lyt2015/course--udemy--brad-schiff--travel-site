@@ -1393,7 +1393,18 @@ a {
   right: 0;
   opacity: 0;
   visibility: hidden;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
+
+.modal--is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 
 .modal__inner {
     position: absolute;

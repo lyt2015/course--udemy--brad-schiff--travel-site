@@ -1027,6 +1027,10 @@ a {
       background-image: url('/assets/images/sprites/sprite-69f19c2e.svg');
     }
 
+.no-svg .icon {
+      background-image: url('/assets/images/sprites/sprite-69f19c2e.png');
+    }
+
 .icon--clear-view-escapes {
     width: 142.4px;
     height: 59.53px;
@@ -1372,8 +1376,8 @@ a {
   opacity: 0;
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
 }
 
 .reveal-item--is-visible {
